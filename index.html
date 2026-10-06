@@ -177,7 +177,7 @@
   var tagName = { sim: "시뮬레이터", "3d": "3D" };
   document.getElementById("chgrid").innerHTML = FB.CHAPTERS.map(function (c) {
     return '<a class="ch-card" href="chapters/' + c.slug + '.html"><span class="num">CHAPTER ' + c.num + "</span><h3>" + c.title + "</h3><p>" + c.desc + '</p><span class="tags">' +
-      c.tags.map(function (t) { return '<span class="' + (t === "sim" ? "sim" : t === "3d" ? "d3" : "") + '">' + (tagName[t] || t) + "</span>"; }).join("") + "</span></a>";
+      c.tags.map(function (t) { return '<span class="' + (t === "sim" ? "tag-sim" : t === "3d" ? "d3" : "") + '">' + (tagName[t] || t) + "</span>"; }).join("") + "</span></a>";
   }).join("");
 
   // 수사 지도
