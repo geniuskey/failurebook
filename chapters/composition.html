@@ -278,7 +278,7 @@
   <section id="surface">
     <h2>표면과 깊이: SIMS · AES · XPS</h2>
     <p>전자 현미경에 붙은 두 기법이 풀지 못하는 질문이 셋 있다. ppm 이하의 미량 원소, 가장 바깥 원자 몇 층의 조성, 그리고 유기물의 분자 구조다. 이 질문에는 다른 탐침이 필요하다.</p>
-    <p><span class="term">SIMS</span><span class="en">(Secondary ion mass spectrometry)</span>는 이온 빔(O₂⁺, Cs⁺)으로 시료를 깎아 내면서 튀어나온 이차 이온을 질량 분석한다. 감도가 ppm~ppb에 이르러 도펀트의 깊이 분포를 잴 수 있는 사실상 유일한 직접 기법이고, 수소까지 모든 원소와 동위 원소를 본다. 이렇게 계속 깎아 내려가는 방식을 동적 SIMS라 한다. 약점은 셋이다. 분석한 자리가 구덩이로 남는다. 충분한 계수를 얻으려면 수십 µm 이상의 면적이 필요해 비아 하나를 잴 수 없다. 이온화 확률이 주변 조성에 따라 몇 자릿수씩 변해(매트릭스 효과) 표준 시료 없이는 농도를 말할 수 없다. 또 1차 이온이 원자를 안쪽으로 밀어 넣으므로 급한 분포의 뒤쪽이 꼬리를 끈다. 1차 이온 에너지를 낮추면 꼬리는 줄지만 깎는 속도가 느려진다. <span class="term">ToF-SIMS</span>는 펄스 이온으로 표면 한두 원자층만 건드리고 비행 시간으로 질량을 재는 정적 방식이다. 분자 조각 이온(C<sub>x</sub>F<sub>y</sub>⁺ 등)이 그대로 나오므로 유기 오염의 종류를 가리는 데 쓴다.</p>
+    <p><span class="term">SIMS</span><span class="en">(Secondary ion mass spectrometry)</span>는 이온 빔(O₂⁺, Cs⁺)으로 시료를 깎아 내면서 튀어나온 이차 이온을 질량 분석한다. 감도가 ppm~ppb에 이르러 도펀트의 깊이 분포를 잴 수 있는 사실상 유일한 직접 기법이고, 수소까지 모든 원소와 동위 원소를 본다. 이렇게 계속 깎아 내려가는 방식을 동적 SIMS라 한다. 약점은 셋이다. 분석한 자리가 구덩이로 남는다. 통상적인 고감도 벌크·블랭킷 도펀트 깊이 분석에서는 충분한 계수를 얻으려고 수십 µm 이상의 면적을 쓰므로 비아 하나의 정량에 바로 적용하기 어렵다. NanoSIMS 같은 특수 장비는 나노 영역을 분석하며, <a href="https://www.cameca.com/company/news/2024/march/nanosims-hr">CAMECA의 NanoSIMS-HR 안내</a>는 가로 분해능 30 nm 이하와 저에너지 깊이 프로파일링을 제시한다. 이 분해능만으로 모든 45 nm 비아에서 ppm 정량이 가능하다는 뜻은 아니며 감도·선량·스퍼터 면적·모재 조건을 함께 봐야 한다. 이온화 확률이 주변 조성에 따라 몇 자릿수씩 변해(매트릭스 효과) 표준 시료 없이는 농도를 말할 수 없다. 또 1차 이온이 원자를 안쪽으로 밀어 넣으므로 급한 분포의 뒤쪽이 꼬리를 끈다. 1차 이온 에너지를 낮추면 꼬리는 줄지만 깎는 속도가 느려진다. <span class="term">ToF-SIMS</span>의 ToF는 비행 시간으로 질량을 구분한다는 뜻이다. 정적 모드에서는 낮은 선량의 펄스 이온으로 표면 한두 원자층의 분자 조각 이온(C<sub>x</sub>F<sub>y</sub>⁺ 등)을 읽어 유기 오염을 구분한다. 별도의 스퍼터빔과 분석빔을 번갈아 쓰는 <a href="https://www.iontof.com/tof-sims-secondary-ion-mass-spectrometry-leis-technique-low-energy-ion-scattering.html">이중 빔 모드</a>에서는 깊이 프로파일과 3D 분석도 가능하며, 이때는 크레이터가 남는다.</p>
 
     <div class="sim" id="sim-sims">
       <div class="sim-head"><span class="sim-tag">SIMULATOR</span><h3>SIMS 깊이 프로파일: 감도와 깊이 분해능</h3></div>
@@ -299,7 +299,7 @@
         <div class="stat"><span class="k">검출 한계</span><span class="v" id="sm-o-d">—</span></div>
         <div class="stat"><span class="k">상대 분석 시간</span><span class="v" id="sm-o-t">—</span></div>
       </div>
-      <div class="sim-note">해볼 것: ① 에너지를 5 keV로 올리면 붕소 분포의 뒤쪽이 늘어져 접합이 실제보다 깊게 읽힌다. 0.25 keV로 내리면 실제 분포에 붙지만 분석 시간이 길어진다. ② 1 nm 두께의 불소 층은 어떤 조건에서도 1 nm로 보이지 않는다. 폭은 넓어지고 높이는 낮아진다. 면적(면밀도)만 보존된다. ③ 분석 영역을 10 µm 아래로 줄이면 검출 한계가 기판 도핑(10<sup>17</sup>) 위로 올라와 접합을 읽을 수 없다. 1 µm에서는 봉우리만 겨우 보인다. SIMS로 비아 하나를 분석할 수 없는 이유다. (수치는 경향을 보이기 위한 근사.)</div>
+      <div class="sim-note">해볼 것: ① 에너지를 5 keV로 올리면 붕소 분포의 뒤쪽이 늘어져 접합이 실제보다 깊게 읽힌다. 0.25 keV로 내리면 실제 분포에 붙지만 분석 시간이 길어진다. ② 1 nm 두께의 불소 층은 어떤 조건에서도 1 nm로 보이지 않는다. 폭은 넓어지고 높이는 낮아진다. 면적(면밀도)만 보존된다. ③ 분석 영역을 10 µm 아래로 줄이면 검출 한계가 기판 도핑(10<sup>17</sup>) 위로 올라와 접합을 읽을 수 없다. 1 µm에서는 봉우리만 겨우 보인다. 이 통상적인 고감도 깊이 분석 모형을 비아 하나의 정량에 그대로 적용하기 어려운 이유다. NanoSIMS의 가로 분해능을 계산한 모형은 아니다. (수치는 경향을 보이기 위한 근사.)</div>
     </div>
 
     <p><span class="term">AES</span><span class="en">(Auger electron spectroscopy)</span>는 전자빔으로 들뜨게 하고 오제 전자를 센다. 오제 전자는 에너지가 수십~2000 eV로 낮아 표면 약 0.5~5 nm에서 나온 것만 에너지를 잃지 않고 빠져나온다. 빔을 수십 nm까지 모을 수 있어 본딩 패드 위의 얼룩이나 작은 입자의 표면을 분석하고, 아르곤 이온으로 깎으며 깊이 분포를 얻는다. 감도는 0.1~1 at%이고 절연체에서는 대전이 문제다.</p>
@@ -314,8 +314,9 @@
           <tr><td>EELS</td><td>전자 → 손실 전자</td><td>1 nm 이하 가능</td><td>시료 두께 전체</td><td>0.1~1 at%</td><td>강함</td><td>있음(ELNES)</td><td>매우 얇은 시료 필요, 빔 손상</td></tr>
           <tr><td>AES</td><td>전자 → 오제 전자</td><td>약 10~50 nm</td><td>0.5~5 nm</td><td>0.1~1 at%</td><td>Li 이상, 강함</td><td>일부</td><td>깊이 분석 시 구덩이</td></tr>
           <tr><td>XPS</td><td>X선 → 광전자</td><td>약 10~수백 µm</td><td>약 5~10 nm</td><td>0.1~1 at%</td><td>Li 이상</td><td>가장 좋음</td><td>표면 분석만이면 거의 없음</td></tr>
-          <tr><td>동적 SIMS</td><td>이온 → 이차 이온</td><td>수십 µm 면적</td><td>깊이 분해능 수 nm</td><td>ppm~ppb</td><td>H 포함 전부</td><td>없음</td><td>구덩이, 되돌릴 수 없음</td></tr>
-          <tr><td>ToF-SIMS</td><td>펄스 이온 → 분자 이온</td><td>약 0.1~1 µm</td><td>1~2 nm</td><td>ppm 수준</td><td>H 포함 전부</td><td>분자 조각</td><td>표면 한 층 이하</td></tr>
+          <tr><td>통상적 고감도 동적 SIMS</td><td>이온 → 이차 이온</td><td>수십 µm 분석 면적(특수 NanoSIMS는 나노 영역 가능)</td><td>깊이 분해능 수 nm</td><td>ppm~ppb</td><td>H 포함 전부</td><td>없음</td><td>구덩이, 되돌릴 수 없음</td></tr>
+          <tr><td>정적 ToF-SIMS 모드</td><td>펄스 이온 → 분자 이온</td><td>약 0.1~1 µm</td><td>정보 깊이 1~2 nm</td><td>ppm 수준(조건 의존)</td><td>H 포함 전부</td><td>분자 조각</td><td>낮은 선량의 표면 분석</td></tr>
+          <tr><td>이중 빔 ToF-SIMS 깊이·3D 모드</td><td>스퍼터빔 + 펄스 분석빔</td><td>장비·모드에 의존</td><td>스퍼터를 반복해 깊이 분석</td><td>조건·표준 시료에 의존</td><td>H 포함 전부</td><td>분자 조각</td><td>크레이터, 시료 소모</td></tr>
           <tr><td>APT</td><td>전계 증발 → 이온</td><td>1 nm 이하(3차원)</td><td>바늘 전체</td><td>약 10 ppm</td><td>전부</td><td>없음</td><td>시료 전부 소모</td></tr>
         </tbody>
       </table>
@@ -375,7 +376,7 @@
           <button class="opt">가속 전압을 5 kV로 낮춰 분석 부피를 줄인다.</button>
           <button class="opt">봉우리의 높이가 Si 표준 시료보다 높은지 본다.</button>
         </div>
-        <div class="quiz-exp">Si Kα(1.740), W Mα(1.775), Ta Mα(1.710)는 SDD의 분해능(이 에너지에서 약 80 eV) 안에 겹친다. 계수를 늘려도 분해능은 좋아지지 않는다. 20 kV는 W L 껍질(흡수단 10.2 keV)을 들뜨게 하기에 충분하므로 W Lα(8.398 keV)가 서 있으면 텅스텐이 있고, 없으면 그 봉우리는 실리콘이다. 5 kV로 낮추면 오히려 이 확인 수단이 사라진다.</div>
+        <div class="quiz-exp">Si Kα(1.740), W Mα(1.775), Ta Mα(1.710)는 SDD의 분해능(이 에너지에서 약 80 eV) 안에 겹친다. 계수를 늘려도 분해능은 좋아지지 않는다. 20 kV는 W L 껍질(흡수단 10.2 keV)을 들뜨게 하기에 충분하므로 W Lα(8.398 keV)가 서 있으면 텅스텐의 증거가 된다. 다만 W L선이 없다는 것만으로 봉우리를 실리콘으로 확정할 수는 없다. Ta M선의 기여, W L선의 검출 한계와 Ta의 다른 계열 선을 함께 확인해야 한다. 5 kV로 낮추면 오히려 이 확인 수단이 사라진다.</div>
       </div>
       <div class="quiz-q"><p>2. 표면의 얇은 구리 잔류물을 보려고 가속 전압을 5 kV로 낮췄더니 Cu Kα(8.048 keV)가 전혀 나타나지 않았다. 올바른 해석은?</p>
         <div class="opts">
@@ -399,10 +400,10 @@
         <div class="opts">
           <button class="opt">STEM-EDS. 분해능이 nm급이므로 트랜지스터 하나에서 바로 잴 수 있다.</button>
           <button class="opt">XPS. 화학 상태까지 알 수 있어 도펀트 활성화 여부도 본다.</button>
-          <button class="opt" data-correct>SIMS. 감도는 충분하지만 수십 µm 면적이 필요해 소자 하나가 아닌 시험 패턴이나 블랭킷 영역에서 잰다.</button>
+          <button class="opt" data-correct>통상적인 고감도 도펀트 깊이 분석용 SIMS. 수십 µm 영역의 시험 패턴이나 블랭킷으로 분석하고, 감도·면적 조건을 확인한다.</button>
           <button class="opt">AES. 표면 감도가 높아 미량 도펀트에 가장 유리하다.</button>
         </div>
-        <div class="quiz-exp">10<sup>17</sup> cm<sup>−3</sup>은 실리콘 원자의 약 2 ppm이다. EDS·XPS·AES의 검출 한계(0.1~1 at%)보다 수천 배 낮다. SIMS만이 이 농도를 재지만 분석 면적이 크고 시료를 파괴한다. 소자 하나의 도핑은 주사 정전 용량 현미경 같은 전기적 탐침 기법이나 APT로 접근한다.</div>
+        <div class="quiz-exp">10<sup>17</sup> cm<sup>−3</sup>은 실리콘 원자의 약 2 ppm이다. EDS·XPS·AES의 검출 한계(0.1~1 at%)보다 수천 배 낮다. 통상적인 고감도 SIMS는 이 농도의 깊이 분포를 읽는 대표 기법이지만 분석 면적이 크고 시료를 파괴한다. NanoSIMS 같은 특수 장비의 나노 영역 분석은 별도의 감도·모재 조건을 확인해야 한다. 소자 하나의 도핑은 주사 정전 용량 현미경 같은 전기적 탐침 기법이나 APT로 접근한다.</div>
       </div>
     </div>
   </section>
