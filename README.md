@@ -52,6 +52,10 @@ python -m http.server 8000   # → http://localhost:8000
 2. DNS에서 `failurebook.euiyun.com`을 `geniuskey.github.io`로 가리키는 **CNAME 레코드**를 추가합니다.
 3. Pages 설정에서 Custom domain이 `failurebook.euiyun.com`으로 잡히면 **Enforce HTTPS**를 켭니다.
 
+## 용어집과 본문 뜻풀이
+
+용어 정의는 `js/glossary-data.js`의 `window.BOOK_GLOSSARY`에 저장합니다. 용어집과 본문 뜻풀이가 같은 데이터를 사용하며, 본문에서 용어에 마우스를 올리거나 키보드로 포커스하거나 모바일에서 탭하면 정의를 확인할 수 있습니다. 공통 동작과 스타일은 `js/glossary-tooltips.js`, `css/glossary-tooltips.css`입니다. 데이터 형식은 시리즈 공통 v1이며, 각 항목은 `ko`(이름), `en`(영문명), `abbr`(약어), `def`(정의), `chapters`(관련 장 목록)를 갖습니다. 이름이 반복되면 한 번만 표시하고, 묶음 항목은 가리킨 이름을 제목에 표시하며 구분에 필요한 비교 설명을 함께 제공합니다.
+
 ## 라이선스
 
 Copyright (c) 2026 geniuskey and FailureBook contributors
